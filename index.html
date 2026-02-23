@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Prathap Dental Care</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f8fafc;
+color:#333;
+line-height:1.6;
+}
+
+/* TOP BAR */
+.topbar{
+background:linear-gradient(90deg,#1eb2a6,#0e7c86);
+color:white;
+display:flex;
+justify-content:space-between;
+padding:8px 8%;
+font-size:14px;
+}
+
+/* NAVBAR */
+header{
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-weight:700;
+color:#0e7c86;
+font-size:18px;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.nav-btn{
+background:#0e7c86;
+color:white;
+padding:8px 16px;
+border-radius:6px;
+}
+
+/* HERO */
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:80px 8%;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.badge{
+background:#e6f9f8;
+color:#0e7c86;
+padding:6px 14px;
+border-radius:20px;
+font-size:13px;
+display:inline-block;
+margin-bottom:15px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#0e7c86;
+}
+
+.hero p{
+margin-bottom:20px;
+color:#555;
+}
+
+.rating{
+margin-bottom:25px;
+font-weight:500;
+}
+
+.primary-btn{
+background:#0e7c86;
+color:white;
+padding:12px 22px;
+border-radius:6px;
+text-decoration:none;
+margin-right:15px;
+display:inline-block;
+}
+
+.secondary-btn{
+border:2px solid #0e7c86;
+padding:10px 20px;
+border-radius:6px;
+text-decoration:none;
+color:#0e7c86;
+display:inline-block;
+}
+
+.hero-image{
+width:380px;
+height:320px;
+background:#e6f9f8;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+color:#0e7c86;
+font-weight:600;
+}
+
+/* CLINIC PHOTO */
+.clinic-photo{
+padding:60px 8%;
+text-align:center;
+}
+
+.clinic-placeholder{
+height:300px;
+background:#e6f9f8;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+color:#0e7c86;
+font-weight:600;
+}
+
+/* ABOUT */
+.about-section{
+padding:80px 8%;
+background:white;
+}
+
+.about-container{
+display:flex;
+gap:60px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.section-tag{
+color:#0e7c86;
+font-weight:600;
+font-size:14px;
+}
+
+.about-text h2{
+font-size:36px;
+margin:15px 0;
+}
+
+.about-text p{
+margin-bottom:15px;
+color:#555;
+}
+
+.quote-box{
+margin-top:20px;
+padding:15px;
+border-left:4px solid #0e7c86;
+background:#eef9f9;
+font-style:italic;
+}
+
+.doctor-placeholder{
+width:280px;
+height:280px;
+border-radius:50%;
+background:#e6f9f8;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+color:#0e7c86;
+font-weight:600;
+}
+
+/* EMERGENCY */
+.emergency{
+margin:60px 8%;
+padding:60px 20px;
+background:linear-gradient(90deg,#1eb2a6,#0e7c86);
+color:white;
+text-align:center;
+border-radius:16px;
+}
+
+.emergency a{
+display:inline-block;
+margin-top:20px;
+background:white;
+color:#0e7c86;
+padding:12px 20px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* FOOTER */
+.main-footer{
+background:#111827;
+color:white;
+padding:60px 8% 20px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.footer-col h3,
+.footer-col h4{
+margin-bottom:15px;
+}
+
+.footer-col p,
+.footer-col li{
+color:#ccc;
+font-size:14px;
+margin-bottom:8px;
+}
+
+.footer-col ul{
+list-style:none;
+padding:0;
+}
+
+.rating-footer{
+color:#facc15;
+font-weight:600;
+margin-top:10px;
+}
+
+.footer-bottom{
+text-align:center;
+border-top:1px solid #333;
+margin-top:30px;
+padding-top:15px;
+font-size:13px;
+color:#aaa;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.hero{
+flex-direction:column;
+text-align:center;
+}
+.about-container{
+flex-direction:column;
+text-align:center;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+<div>📞 099656 80916</div>
+<div>🕒 Open 24 Hours</div>
+<div>📍 Arisipalayam, Salem</div>
+</div>
+
+<header>
+<div class="logo">Dr. PRATHAP DENTAL CARE</div>
+<nav>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#">Services</a>
+<a href="#">Reviews</a>
+<a href="#">Contact</a>
+<a href="#" class="nav-btn">Book Appointment</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<span class="badge">Open 24 Hours • Emergency Care Available</span>
+<h1>Professional Dental Care in <span>Salem</span></h1>
+<p>Caring for Every Smile, Day and Night. Gentle, hygienic and expert treatments.</p>
+<div class="rating">⭐ 4.8 (80 Reviews • Google Rating)</div>
+<a href="#" class="primary-btn">Book Appointment</a>
+<a href="tel:09965680916" class="secondary-btn">Call Now</a>
+</div>
+
+<div class="hero-image">
+Your Clinic Photo Here
+<span style="font-size:13px;color:#777;">Replace with actual clinic image</span>
+</div>
+</section>
+
+<section class="clinic-photo">
+<div class="clinic-placeholder">
+Clinic Interior Photo
+<span style="font-size:13px;color:#777;">Replace with real clinic photo</span>
+</div>
+</section>
+
+<section id="about" class="about-section">
+<div class="about-container">
+
+<div class="about-text">
+<span class="section-tag">ABOUT US</span>
+<h2>Meet Dr. Prathap</h2>
+
+<p>
+Dr. Prathap is a compassionate and highly skilled dentist dedicated to providing exceptional dental care to every patient.
+</p>
+
+<p>
+Our clinic follows patient-centered care with the highest standards of hygiene and safety, available 24/7 for emergency dental services.
+</p>
+
+<div class="quote-box">
+“We believe every patient deserves gentle, professional dental care in a welcoming environment. Your smile is our passion.”
+</div>
+</div>
+
+<div class="doctor-placeholder">
+Dr. Prathap's Photo
+<span style="font-size:13px;color:#777;">Replace with doctor's image</span>
+</div>
+
+</div>
+</section>
+
+<section class="emergency">
+<h2>Need Emergency Dental Care?</h2>
+<p>We are available 24/7 for dental emergencies.</p>
+<a href="tel:09965680916">Call: 099656 80916</a>
+</section>
+
+<footer class="main-footer">
+<div class="footer-container">
+
+<div class="footer-col">
+<h3>Dr. PRATHAP DENTAL CARE</h3>
+<p>Professional dental care in Salem with 24/7 emergency services.</p>
+<div class="rating-footer">⭐ 4.8 (80 reviews)</div>
+</div>
+
+<div class="footer-col">
+<h4>Quick Links</h4>
+<ul>
+<li>Home</li>
+<li>About</li>
+<li>Services</li>
+<li>Reviews</li>
+<li>Book Appointment</li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h4>Contact Us</h4>
+<p>📞 099656 80916</p>
+<p>📧 drprathapdentalcare@example.com</p>
+<p>📍 Arisipalayam, Salem – 636009</p>
+<p style="color:#1eb2a6;">🕒 Open 24 Hours</p>
+</div>
+
+<div class="footer-col">
+<h4>Location</h4>
+<iframe src="https://www.google.com/maps?q=Arisipalayam,Salem&output=embed"
+width="100%" height="150"
+style="border:0;border-radius:8px;" loading="lazy"></iframe>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Dr. PRATHAP DENTAL CARE. All rights reserved.
+</div>
+</footer>
+
+</body>
+</html>
