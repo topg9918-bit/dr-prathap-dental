@@ -12,7 +12,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Segoe UI', sans-serif;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
@@ -50,10 +50,6 @@ font-size:18px;
 color:#0f766e;
 }
 
-nav{
-display:flex;
-}
-
 .nav-list{
 list-style:none;
 display:flex;
@@ -65,11 +61,6 @@ align-items:center;
 text-decoration:none;
 color:#333;
 font-weight:500;
-transition:.3s;
-}
-
-.nav-list a:hover{
-color:#0f766e;
 }
 
 .book-btn{
@@ -89,7 +80,6 @@ background:#d1f1ef;
 color:#0f766e;
 padding:8px 18px;
 border-radius:30px;
-font-size:14px;
 display:inline-block;
 margin-bottom:20px;
 }
@@ -105,7 +95,6 @@ color:#0f766e;
 
 .hero p{
 font-size:18px;
-color:#555;
 margin-bottom:30px;
 }
 
@@ -116,7 +105,6 @@ padding:12px 22px;
 border-radius:8px;
 text-decoration:none;
 margin-right:15px;
-display:inline-block;
 }
 
 .secondary-btn{
@@ -125,7 +113,6 @@ color:#0f766e;
 padding:10px 22px;
 border-radius:8px;
 text-decoration:none;
-display:inline-block;
 }
 
 /* ===== SECTIONS ===== */
@@ -139,10 +126,6 @@ margin-bottom:20px;
 color:#0f766e;
 }
 
-.light{
-background:white;
-}
-
 .services-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -151,11 +134,10 @@ margin-top:30px;
 }
 
 .card{
-background:#ffffff;
+background:white;
 padding:25px;
 border-radius:10px;
 box-shadow:0 4px 12px rgba(0,0,0,0.05);
-font-weight:500;
 text-align:center;
 }
 
@@ -171,21 +153,54 @@ margin-top:20px;
 box-shadow:0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* ===== CONTACT ===== */
-.contact-box{
-margin-top:20px;
-font-size:16px;
+/* ===== DOCTOR SECTION ===== */
+.doctor-section{
+display:flex;
+align-items:center;
+gap:50px;
+flex-wrap:wrap;
 }
 
-.contact-box p{
-margin-bottom:10px;
+.doctor-photo{
+width:250px;
+height:250px;
+border-radius:50%;
+background:#d1f1ef;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:14px;
+color:#0f766e;
+text-align:center;
+}
+
+.doctor-info{
+flex:1;
+}
+
+/* ===== CLINIC GALLERY ===== */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.gallery-box{
+height:200px;
+background:#d1f1ef;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+color:#0f766e;
 }
 
 /* ===== FOOTER ===== */
 .footer{
 background:#0f172a;
 color:white;
-padding:40px 60px;
+padding:60px;
 margin-top:60px;
 }
 
@@ -194,15 +209,8 @@ margin-bottom:15px;
 }
 
 .footer p{
-font-size:14px;
 color:#ccc;
-}
-
-/* ===== HAMBURGER ===== */
-.menu-toggle{
-display:none;
-font-size:26px;
-cursor:pointer;
+margin-bottom:8px;
 }
 
 /* ===== MOBILE ===== */
@@ -212,35 +220,10 @@ cursor:pointer;
 flex-direction:column;
 text-align:center;
 padding:10px 20px;
-gap:5px;
 }
 
 .header{
 padding:15px 20px;
-}
-
-.menu-toggle{
-display:block;
-}
-
-.nav-list{
-position:absolute;
-top:70px;
-left:0;
-width:100%;
-background:white;
-flex-direction:column;
-display:none;
-padding:20px 0;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-}
-
-.nav-list.active{
-display:flex;
-}
-
-.nav-list li{
-margin:12px 0;
 }
 
 .hero{
@@ -248,16 +231,17 @@ padding:60px 20px;
 text-align:center;
 }
 
-.hero h1{
-font-size:32px;
-}
-
 .section{
 padding:60px 20px;
 }
 
+.doctor-section{
+flex-direction:column;
+text-align:center;
+}
+
 .footer{
-padding:30px 20px;
+padding:40px 20px;
 }
 
 }
@@ -277,19 +261,13 @@ padding:30px 20px;
 <!-- HEADER -->
 <header class="header">
 <div class="logo">Dr. PRATHAP DENTAL CARE</div>
-
-<div class="menu-toggle" id="mobile-menu">☰</div>
-
-<nav>
 <ul class="nav-list">
 <li><a href="#">Home</a></li>
-<li><a href="#about">About</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#reviews">Reviews</a></li>
 <li><a href="#contact">Contact</a></li>
 <li><a href="#" class="book-btn">Book Appointment</a></li>
 </ul>
-</nav>
 </header>
 
 <!-- HERO -->
@@ -301,14 +279,8 @@ padding:30px 20px;
 <a href="tel:09965680916" class="secondary-btn">Call Now</a>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-<h2>Meet Dr. Prathap</h2>
-<p>Dr. Prathap is a compassionate and highly skilled dentist dedicated to providing exceptional dental care with patient comfort, hygiene, and excellence as top priorities.</p>
-</section>
-
 <!-- SERVICES -->
-<section id="services" class="section light">
+<section id="services" class="section">
 <h2>Our Services</h2>
 <div class="services-grid">
 <div class="card">General Dentistry</div>
@@ -321,22 +293,42 @@ padding:30px 20px;
 <!-- REVIEWS -->
 <section id="reviews" class="section reviews">
 <h2>Patient Reviews</h2>
-<div class="review-card">
-⭐ 4.8 Rating — “Excellent treatment and very caring doctor.”
+<div class="review-card">⭐ 4.8 Rating — Excellent treatment and caring doctor.</div>
+<div class="review-card">⭐ 5.0 Rating — Clean clinic and professional service.</div>
+</section>
+
+<!-- DOCTOR SECTION -->
+<section class="section">
+<h2>About Dr. Prathap</h2>
+<div class="doctor-section">
+
+<div class="doctor-photo">
+Dr. Photo<br>Place Here
 </div>
-<div class="review-card">
-⭐ 5.0 Rating — “Clean clinic and professional service.”
+
+<div class="doctor-info">
+<p>Dr. Prathap is a compassionate and highly skilled dentist dedicated to providing exceptional dental care. With years of experience and commitment to hygiene and patient comfort, he ensures every patient receives the best treatment possible.</p>
+</div>
+
+</div>
+</section>
+
+<!-- CLINIC GALLERY -->
+<section class="section">
+<h2>Our Clinic</h2>
+<div class="gallery">
+<div class="gallery-box">Clinic Photo 1</div>
+<div class="gallery-box">Clinic Photo 2</div>
+<div class="gallery-box">Clinic Photo 3</div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="section">
 <h2>Contact Us</h2>
-<div class="contact-box">
 <p>📞 099656 80916</p>
 <p>📍 158/28, Thammannan Road, Arisipalayam, Salem</p>
 <p>🕒 Open 24 Hours</p>
-</div>
 </section>
 
 <!-- FOOTER -->
@@ -345,12 +337,6 @@ padding:30px 20px;
 <p>Professional dental care in Salem with 24/7 emergency services.</p>
 <p>© 2026 All Rights Reserved</p>
 </footer>
-
-<script>
-const menu=document.getElementById("mobile-menu");
-const nav=document.querySelector(".nav-list");
-menu.addEventListener("click",()=>{nav.classList.toggle("active");});
-</script>
 
 </body>
 </html>
