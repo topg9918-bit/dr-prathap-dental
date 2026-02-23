@@ -5,142 +5,228 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dr. Prathap Dental Care | Salem</title>
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
-body{background:#f4f7f6;color:#333;line-height:1.6;}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f9fbfd;
+    color:#222;
+}
+
+/* HEADER */
 header{
+    position:fixed;
+    width:100%;
     background:#ffffff;
-    padding:15px 8%;
+    padding:18px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    position:sticky;
-    top:0;
+    box-shadow:0 2px 15px rgba(0,0,0,0.05);
     z-index:1000;
 }
-header h2{color:#1b4332;}
+
+header h2{
+    color:#0f766e;
+    font-weight:700;
+}
+
 nav a{
     text-decoration:none;
-    margin-left:20px;
+    margin-left:25px;
     color:#333;
     font-weight:500;
+    transition:0.3s;
 }
-nav a:hover{color:#2d6a4f;}
+
+nav a:hover{
+    color:#0f766e;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(15,118,110,0.7),rgba(15,118,110,0.7)),
+    url('https://images.unsplash.com/photo-1588776814546-ec7e1b6ef8a0') center/cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:0 20px;
+}
+
+.hero h1{
+    font-size:52px;
+    font-weight:700;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:20px;
+    max-width:700px;
+}
 
 .btn{
-    background:#2d6a4f;
-    color:white;
-    padding:10px 20px;
-    border-radius:5px;
+    margin-top:30px;
+    background:white;
+    color:#0f766e;
+    padding:12px 30px;
+    border-radius:30px;
     text-decoration:none;
-    display:inline-block;
-    margin-top:15px;
+    font-weight:600;
+    transition:0.3s;
 }
-.btn:hover{background:#1b4332;}
 
-.hero{
-    background:linear-gradient(to right,#e9f5f2,#ffffff);
-    padding:90px 8%;
-    text-align:center;
+.btn:hover{
+    background:#e0f2f1;
 }
-.hero h1{font-size:42px;margin-bottom:15px;}
-.hero span{color:#2d6a4f;}
 
-.section{padding:70px 8%;}
+/* SECTIONS */
+.section{
+    padding:100px 10%;
+}
 
+/* ABOUT */
 .about{
     display:flex;
-    flex-wrap:wrap;
+    gap:60px;
     align-items:center;
-    gap:40px;
+    flex-wrap:wrap;
 }
+
 .about img{
-    width:300px;
-    border-radius:10px;
+    width:380px;
+    border-radius:15px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.1);
 }
+
+.about h2{
+    font-size:32px;
+    margin-bottom:20px;
+    color:#0f766e;
+}
+
+/* SERVICES */
 .services{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    gap:30px;
 }
+
 .service-box{
-    background:#fff;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.05);
-}
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
-}
-.gallery img{
-    width:100%;
-    border-radius:10px;
-}
-
-.reviews{
-    background:#e9f5f2;
-}
-.review-box{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    margin-bottom:15px;
-}
-
-.form-container{
     background:white;
     padding:30px;
-    border-radius:10px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.05);
-    max-width:500px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    transition:0.3s;
 }
+
+.service-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+.service-box h3{
+    margin-bottom:15px;
+    color:#0f766e;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+}
+
+/* REVIEWS */
+.reviews{
+    background:#ecfeff;
+}
+
+.review-box{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* FORM */
+.form-container{
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
 form input, form textarea{
     width:100%;
-    padding:10px;
+    padding:12px;
     margin-bottom:15px;
     border:1px solid #ccc;
-    border-radius:5px;
+    border-radius:8px;
 }
+
 form button{
-    background:#2d6a4f;
+    background:#0f766e;
     color:white;
     border:none;
-    padding:10px;
-    border-radius:5px;
+    padding:12px;
+    width:100%;
+    border-radius:8px;
+    font-weight:600;
     cursor:pointer;
 }
-form button:hover{background:#1b4332;}
 
-.contact{background:#f4f7f6;}
+form button:hover{
+    background:#0d5c56;
+}
+
+/* CONTACT */
 .map iframe{
     width:100%;
-    height:300px;
-    border-radius:10px;
-    margin-top:20px;
+    height:350px;
+    border-radius:15px;
+    margin-top:30px;
 }
 
+/* FOOTER */
 footer{
-    background:#1b4332;
+    background:#0f172a;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
 }
 
+/* WHATSAPP */
 .whatsapp{
     position:fixed;
     bottom:20px;
     right:20px;
     background:#25D366;
     color:white;
-    padding:15px;
+    padding:18px;
     border-radius:50%;
-    font-size:22px;
+    font-size:24px;
     text-decoration:none;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 </style>
 </head>
@@ -155,71 +241,69 @@ footer{
 <a href="#services">Services</a>
 <a href="#gallery">Gallery</a>
 <a href="#reviews">Reviews</a>
+<a href="#appointment">Book</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <section class="hero">
-<h1>Professional Dental Care in <span>Salem</span></h1>
-<p>Gentle. Hygienic. Advanced treatments with 24/7 Emergency Support.</p>
+<h1>Premium Dental Care in Salem</h1>
+<p>Advanced, hygienic and compassionate dental treatments with 24/7 emergency support.</p>
 <a href="#appointment" class="btn">Book Appointment</a>
 </section>
 
 <section class="section about" id="about">
-<img src="https://images.unsplash.com/photo-1588776814546-ec7e1b6ef8a0" alt="Doctor">
+<img src="https://images.unsplash.com/photo-1606813902452-7d8c4b6d7b3b">
 <div>
 <h2>Meet Dr. Prathap</h2>
-<p>Highly experienced and compassionate dentist dedicated to providing
-top-quality dental care with modern equipment and complete hygiene standards.</p>
+<p>Experienced and compassionate dental professional providing modern treatments with complete hygiene standards and patient comfort priority.</p>
 </div>
 </section>
 
 <section class="section" id="services">
-<h2 style="margin-bottom:30px;">Our Services</h2>
+<h2 style="text-align:center;margin-bottom:50px;color:#0f766e;">Our Services</h2>
 <div class="services">
-<div class="service-box"><h3>Root Canal</h3><p>Painless advanced RCT.</p></div>
-<div class="service-box"><h3>Teeth Whitening</h3><p>Bright & confident smile.</p></div>
+<div class="service-box"><h3>Root Canal</h3><p>Painless advanced procedures.</p></div>
 <div class="service-box"><h3>Dental Implants</h3><p>Permanent tooth replacement.</p></div>
+<div class="service-box"><h3>Teeth Whitening</h3><p>Bright confident smile.</p></div>
 <div class="service-box"><h3>Braces</h3><p>Orthodontic alignment solutions.</p></div>
-<div class="service-box"><h3>Cleaning</h3><p>Professional scaling & polishing.</p></div>
-<div class="service-box"><h3>Emergency Care</h3><p>24/7 dental emergency services.</p></div>
+<div class="service-box"><h3>Cleaning</h3><p>Scaling & polishing.</p></div>
+<div class="service-box"><h3>Emergency Care</h3><p>24/7 urgent dental support.</p></div>
 </div>
 </section>
 
 <section class="section" id="gallery">
-<h2 style="margin-bottom:30px;">Clinic Gallery</h2>
+<h2 style="text-align:center;margin-bottom:50px;color:#0f766e;">Clinic Gallery</h2>
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1606813902452-7d8c4b6d7b3b">
 <img src="https://images.unsplash.com/photo-1588776814546-ec7e1b6ef8a0">
 <img src="https://images.unsplash.com/photo-1588776814546-0e8e6b0e3e3e">
+<img src="https://images.unsplash.com/photo-1606813902452-7d8c4b6d7b3b">
 </div>
 </section>
 
 <section class="section reviews" id="reviews">
-<h2 style="margin-bottom:30px;">Patient Reviews</h2>
-<div class="review-box">⭐⭐⭐⭐⭐ Excellent treatment and very friendly doctor.</div>
-<div class="review-box">⭐⭐⭐⭐⭐ Clean clinic and painless root canal experience.</div>
-<div class="review-box">⭐⭐⭐⭐⭐ Available even at midnight for emergencies!</div>
+<h2 style="text-align:center;margin-bottom:40px;color:#0f766e;">Patient Reviews</h2>
+<div class="review-box">⭐⭐⭐⭐⭐ Excellent service and painless treatment.</div>
+<div class="review-box">⭐⭐⭐⭐⭐ Very hygienic clinic and friendly staff.</div>
+<div class="review-box">⭐⭐⭐⭐⭐ Available even for late night emergencies.</div>
 </section>
 
 <section class="section" id="appointment">
-<h2 style="margin-bottom:20px;">Book Appointment</h2>
+<h2 style="text-align:center;margin-bottom:40px;color:#0f766e;">Book Appointment</h2>
 <div class="form-container">
 <form>
 <input type="text" placeholder="Your Name" required>
 <input type="tel" placeholder="Phone Number" required>
 <input type="date" required>
-<textarea placeholder="Your Message"></textarea>
+<textarea placeholder="Message"></textarea>
 <button type="submit">Submit</button>
 </form>
 </div>
 </section>
 
-<section class="section contact" id="contact">
-<h2>Contact Us</h2>
-<p><strong>Phone:</strong> 099656 80916</p>
-<p><strong>Address:</strong> 158/28, Thammannan Road, Arisipalayam, Salem</p>
-<p><strong>Open:</strong> 24 Hours</p>
+<section class="section" id="contact">
+<h2 style="text-align:center;margin-bottom:30px;color:#0f766e;">Contact Us</h2>
+<p style="text-align:center;">Phone: 099656 80916 | 158/28 Thammannan Road, Arisipalayam, Salem | Open 24 Hours</p>
 
 <div class="map">
 <iframe src="https://www.google.com/maps?q=Salem,Tamil%20Nadu&output=embed"></iframe>
