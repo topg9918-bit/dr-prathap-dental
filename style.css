@@ -1,4 +1,3 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -50,15 +49,11 @@ nav {
   align-items: center;
 }
 
-.nav-list li {
-  list-style: none;
-}
-
 .nav-list a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
 .nav-list a:hover {
@@ -72,11 +67,22 @@ nav {
   border-radius: 8px;
 }
 
-/* HAMBURGER */
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
+/* BUTTONS */
+.primary-btn {
+  background: #0f766e;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.secondary-btn {
+  border: 2px solid #0f766e;
+  color: #0f766e;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
 }
 
 /* HERO */
@@ -106,7 +112,14 @@ nav {
 .hero p {
   font-size: 18px;
   color: #555;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
 }
 
 /* MOBILE */
@@ -114,8 +127,8 @@ nav {
 
   .topbar {
     flex-direction: column;
-    padding: 10px 20px;
     text-align: center;
+    padding: 10px 20px;
   }
 
   .header {
